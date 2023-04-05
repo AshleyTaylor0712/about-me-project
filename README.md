@@ -15,6 +15,6 @@ I have built a bio page using basic CSS, HTML and JS.
 
 ### Lighthouse Accessibility Report Score
 
-* Provide a screenshot of your score after running a Lighthouse Accessibility report.
+* ![lighthouse report](/img/B335CA51-AD38-491A-87AF-8BAAB8369EE4.jpeg "lighthouse report").
 
 ### Reflections and Comments
