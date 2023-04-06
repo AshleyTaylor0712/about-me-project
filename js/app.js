@@ -1,7 +1,7 @@
 'use strict';
 
 let userName = prompt('Welcome! Please tell us your name!');
-alert ('Thanks for stopping by ' + userName + '. Please answer the following questions about Ashley.');
+alert('Thanks for stopping by ' + userName + '. Please answer the following questions about Ashley.');
 
 let readingQuestion = prompt('Does Ashley enjoy reading? Y/N').toUpperCase();
 //if (readingQuestion === 'Y') {
@@ -47,7 +47,7 @@ if (momQuestion === 'N') {
   alert('She actually has three daughters and a son.');
 }
 
-let marriedQuestion  = prompt('Is Ashley married?Y/N').toUpperCase();
+let marriedQuestion = prompt('Is Ashley married?Y/N').toUpperCase();
 //if (marriedQuestion === 'Y') {
 //console.log('Yep! Her husbands name is Zach. Thanks for answering our questions ' + userName);
 //}
@@ -60,45 +60,44 @@ if (marriedQuestion === 'N') {
 
 let maxInput = 5;
 
-while(maxInput >1){
+while (maxInput > 1) {
   maxInput--;
   let georgiaYears = parseInt(prompt('How many years do you think has Ash lived in GA?'));
-  if (georgiaYears >= 14){
+  if (georgiaYears >= 14) {
     alert('Not that many!');
   }
-  if (georgiaYears <= 12){
+  if (georgiaYears <= 12) {
     alert('More than that!');
   }
-  if (georgiaYears === 13){
+  if (georgiaYears === 13) {
     alert('Spot on!');
     break;
   }
-  if (maxInput === 1 && georgiaYears !== 13){
+  if (maxInput === 1 && georgiaYears !== 13) {
     alert('Thanks for guessing! GA has been home for 13 years.');
     break;
   }
 }
 
-let ashDrinks = ['wine','water','coffee'];
+let ashDrinks = ['wine', 'water', 'coffee'];
 let firstGuess = prompt('Can you guess her favorite beverages?');
 let maxGuess = 7;
 let correctGuess = false;
 
-while(correctGuess != true) {
-  for (let i = 0;i<ashDrinks.length;i++){
-if (firstGuess === [i].toLowerCase()){
-alert('How did you know?! Here are all of my faves ${ashDrinks}');
-correctGuess = true;
-break;
+while (correctGuess !== true && maxGuess >= 1) {
+  for (let i = 0; i < ashDrinks.length; i++) {
+    if (firstGuess === ashDrinks[i].toLowerCase()) {
+      alert(`How did you know?! Here are all of my faves ${ashDrinks}`);
+      correctGuess = true;
+      break;
+    }
   }
+  if (correctGuess === false) {
+    maxGuess--;
+    firstGuess = prompt('guess something else');
   }
-};
 
-else {
-  maxGuess--;
-  firstGuess = prompt('guess something else');
-}
-
-if (maxGuess === 0){
-  alert('game over');
+  if (maxGuess === 0) {
+    alert('game over');
+  }
 }
