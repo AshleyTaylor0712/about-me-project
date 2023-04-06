@@ -52,8 +52,47 @@ let marriedQuestion  = prompt('Is Ashley married?Y/N').toUpperCase();
 //console.log('Yep! Her husbands name is Zach. Thanks for answering our questions ' + userName);
 //}
 if (marriedQuestion === 'Y') {
-  alert('Yep! Her husbands name is Zach. Thanks for answering our questions ' + userName + '.');
+  alert('You got it ' + userName + '! Her husbands name is Zach.');
 }
 if (marriedQuestion === 'N') {
-  alert('She is! Her husbands name is Zach. Thanks for answering our questions ' + userName + '.');
+  alert('She is! Her husbands name is Zach. ');
+}
+
+let maxInput = 5;
+
+while(maxInput >1){
+  maxInput--;
+  let georgiaYears = parseInt(prompt('How many years do you think has Ash lived in GA?'));
+  if (georgiaYears >= 14){
+    alert('Not that many!');
+  }
+  if (georgiaYears <= 12){
+    alert('More than that!');
+  }
+  if (georgiaYears === 13){
+    alert('Spot on!');
+    break;
+  }
+  if (maxInput === 1 && georgiaYears !== 13){
+    alert('Thanks for guessing! GA has been home for 13 years.');
+    break;
+  }
+}
+
+let ashArray = ['wine','water','coffee'];
+let maxGuess = 7;
+
+while(maxGuess >1){
+  maxGuess--;
+  let userGuess = parseInt(prompt('fave bev?'));
+
+  if (userGuess !== ashArray){
+    alert('nice try');
+    prompt('guess again');
+  }
+
+  if (ashArray.includes(userGuess.toLowerCase())){
+    alert('you got it');
+    break;
+  }
 }
