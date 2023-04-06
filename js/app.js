@@ -79,20 +79,26 @@ while(maxInput >1){
   }
 }
 
-let ashArray = ['wine','water','coffee'];
+let ashDrinks = ['wine','water','coffee'];
+let firstGuess = prompt('Can you guess her favorite beverages?');
 let maxGuess = 7;
+let correctGuess = false;
 
-while(maxGuess >1){
-  maxGuess--;
-  let userGuess = parseInt(prompt('fave bev?'));
-
-  if (userGuess !== ashArray){
-    alert('nice try');
-    prompt('guess again');
+while(correctGuess != true) {
+  for (let i = 0;i<ashDrinks.length;i++){
+if (firstGuess === [i].toLowerCase()){
+alert('How did you know?! Here are all of my faves ${ashDrinks}');
+correctGuess = true;
+break;
   }
+  }
+};
 
-  //if (ashArray.includes(userGuess.toLowerCase())){
-    //alert('you got it');
-    //break;
-  //}
-//}
+else {
+  maxGuess--;
+  firstGuess = prompt('guess something else');
+}
+
+if (maxGuess === 0){
+  alert('game over');
+}
