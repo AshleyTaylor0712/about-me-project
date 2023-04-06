@@ -91,8 +91,8 @@ while(maxGuess >1){
     prompt('guess again');
   }
 
-  if (ashArray.includes(userGuess.toLowerCase())){
-    alert('you got it');
-    break;
-  }
-}
+  //if (ashArray.includes(userGuess.toLowerCase())){
+    //alert('you got it');
+    //break;
+  //}
+//}
