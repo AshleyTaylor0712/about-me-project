@@ -1,8 +1,10 @@
-h1 {
-  font-size: 7rem;
-}
+
 
 ul {
   list-style: disc;
   margin: 1rem;
+}
+
+body {
+  background-color: blue;
 }
